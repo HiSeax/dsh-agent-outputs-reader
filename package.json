@@ -1,0 +1,45 @@
+{
+  "name": "@dsh-external/dsh-agent-outputs-reader",
+  "version": "0.2.0",
+  "description": "Overlay reader for agent output files: Markdown/GFM rendering, in-panel PDF preview, DOCX/XLSX/PPTX text extraction, reply-end file chips. Pure JS, zero dependencies, no persistent UI.",
+  "private": false,
+  "type": "module",
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HiSeax/dsh-agent-outputs-reader.git"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml"
+  ],
+  "license": "BSD-3-Clause",
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "test": "node --test tests/*.cjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-llm": ">=0.0.1-rc <0.1.0 || >=0.1.0-rc <2",
+    "@deepseek-ai/dsh-tools": ">=0.0.1-rc <0.1.0 || >=0.1.0-rc <2",
+    "cordis": ">=4.0.0-rc <5",
+    "schemastery": "^3.18.0",
+    "@deepseek-ai/dsh-client-ui-slots": ">=0.0.1-rc <0.1.0 || >=0.1.0-rc <2"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ],
+      "platform": "web"
+    }
+  }
+}

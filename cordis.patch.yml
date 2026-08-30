@@ -3,8 +3,8 @@
 # output files) and lets the browser half be discovered through the package.json
 # `dsh.client` declaration (lib/client.js: reader overlay + reply-end file chips).
 #
-# Install: dsh plugin --profile <name> add @dsh-external/dsh-agent-outputs-reader
+# Install: dsh plugin --profile <name> add dsh-agent-outputs-reader
 
 - insert:
     - id: agent-outputs-reader
-      name: '@dsh-external/dsh-agent-outputs-reader'
+      name: dsh-agent-outputs-reader

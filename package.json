@@ -1,5 +1,5 @@
 {
-  "name": "@dsh-external/dsh-agent-outputs-reader",
+  "name": "dsh-agent-outputs-reader",
   "version": "0.2.0",
   "description": "Overlay reader for agent output files: Markdown/GFM rendering, in-panel PDF preview, DOCX/XLSX/PPTX text extraction, reply-end file chips. Pure JS, zero dependencies, no persistent UI.",
   "private": false,

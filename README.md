@@ -1,4 +1,4 @@
-# @dsh-external/dsh-agent-outputs-reader
+# dsh-agent-outputs-reader
 
 **无任何常驻 UI**。定位：阅读 **agent 产出的任何文件**——文本/markdown、PDF、DOCX/XLSX/PPTX。
 
